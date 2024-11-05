@@ -6,9 +6,3 @@
 
 [node name="Player" parent="." instance=ExtResource("1_clvkg")]
 position = Vector2(107, 84)
-
-[node name="Player2" parent="." instance=ExtResource("1_clvkg")]
-position = Vector2(113, 84)
-
-[node name="Player3" parent="." instance=ExtResource("1_clvkg")]
-position = Vector2(120, 84)

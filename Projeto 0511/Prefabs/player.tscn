@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c64mry310dk8"]
+[gd_scene load_steps=12 format=3 uid="uid://c64mry310dk8"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_lksa3"]
 [ext_resource type="Texture2D" uid="uid://bkkrxkdepjp7e" path="res://Sprites/Characters/knight_f_idle_anim_f0.png" id="1_tt5r7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://04jvsqhmfhoc" path="res://Sprites/Characters/knight_f_run_anim_f1.png" id="7_pnowo"]
 [ext_resource type="Texture2D" uid="uid://cveglx8s7vjc3" path="res://Sprites/Characters/knight_f_run_anim_f2.png" id="8_34dm7"]
 [ext_resource type="Texture2D" uid="uid://cmuekxgjqdyp6" path="res://Sprites/Characters/knight_f_run_anim_f3.png" id="9_2cw4o"]
+[ext_resource type="Script" path="res://Scripts/Gun.gd" id="10_8l55j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uawfd"]
 animations = [{
@@ -51,8 +52,12 @@ animations = [{
 script = ExtResource("1_lksa3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.5625, 1.35714)
+position = Vector2(53, 34)
 sprite_frames = SubResource("SpriteFrames_uawfd")
 animation = &"walk"
 autoplay = "Idle"
-frame_progress = 0.0173871
+frame_progress = 0.524937
+
+[node name="Gun" type="Node2D" parent="."]
+position = Vector2(54, 44)
+script = ExtResource("10_8l55j")
