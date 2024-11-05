@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://c64mry310dk8"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_lksa3"]
+[ext_resource type="Texture2D" uid="uid://bkkrxkdepjp7e" path="res://Sprites/Characters/knight_f_idle_anim_f0.png" id="1_tt5r7"]
+[ext_resource type="Texture2D" uid="uid://cpwiqxgh8liwv" path="res://Sprites/Characters/knight_f_idle_anim_f1.png" id="2_rde20"]
+[ext_resource type="Texture2D" uid="uid://cfgdu8k3lxasb" path="res://Sprites/Characters/knight_f_idle_anim_f2.png" id="3_3y0df"]
+[ext_resource type="Texture2D" uid="uid://3ipap5vdkqu1" path="res://Sprites/Characters/knight_f_idle_anim_f3.png" id="4_owwnf"]
+[ext_resource type="Texture2D" uid="uid://daw7rgay8duls" path="res://Sprites/Characters/knight_f_run_anim_f0.png" id="6_oqg0l"]
+[ext_resource type="Texture2D" uid="uid://04jvsqhmfhoc" path="res://Sprites/Characters/knight_f_run_anim_f1.png" id="7_pnowo"]
+[ext_resource type="Texture2D" uid="uid://cveglx8s7vjc3" path="res://Sprites/Characters/knight_f_run_anim_f2.png" id="8_34dm7"]
+[ext_resource type="Texture2D" uid="uid://cmuekxgjqdyp6" path="res://Sprites/Characters/knight_f_run_anim_f3.png" id="9_2cw4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uawfd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tt5r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rde20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3y0df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_owwnf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_oqg0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pnowo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_34dm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2cw4o")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_lksa3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5625, 1.35714)
+sprite_frames = SubResource("SpriteFrames_uawfd")
+animation = &"walk"
+autoplay = "Idle"
+frame_progress = 0.0173871
