@@ -1,30 +1,30 @@
-[gd_scene load_steps=12 format=3 uid="uid://c64mry310dk8"]
+[gd_scene load_steps=12 format=3 uid="uid://dr0quwv1jxb4t"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_lksa3"]
-[ext_resource type="Texture2D" uid="uid://bkkrxkdepjp7e" path="res://Sprites/Characters/knight_f_idle_anim_f0.png" id="1_tt5r7"]
-[ext_resource type="Texture2D" uid="uid://cpwiqxgh8liwv" path="res://Sprites/Characters/knight_f_idle_anim_f1.png" id="2_rde20"]
-[ext_resource type="Texture2D" uid="uid://cfgdu8k3lxasb" path="res://Sprites/Characters/knight_f_idle_anim_f2.png" id="3_3y0df"]
-[ext_resource type="Texture2D" uid="uid://3ipap5vdkqu1" path="res://Sprites/Characters/knight_f_idle_anim_f3.png" id="4_owwnf"]
-[ext_resource type="Texture2D" uid="uid://daw7rgay8duls" path="res://Sprites/Characters/knight_f_run_anim_f0.png" id="6_oqg0l"]
-[ext_resource type="Texture2D" uid="uid://04jvsqhmfhoc" path="res://Sprites/Characters/knight_f_run_anim_f1.png" id="7_pnowo"]
-[ext_resource type="Texture2D" uid="uid://cveglx8s7vjc3" path="res://Sprites/Characters/knight_f_run_anim_f2.png" id="8_34dm7"]
-[ext_resource type="Texture2D" uid="uid://cmuekxgjqdyp6" path="res://Sprites/Characters/knight_f_run_anim_f3.png" id="9_2cw4o"]
-[ext_resource type="Script" path="res://Scripts/Gun.gd" id="10_8l55j"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_dkh6q"]
+[ext_resource type="Texture2D" uid="uid://bkkrxkdepjp7e" path="res://Sprites/Characters/knight_f_idle_anim_f0.png" id="1_yjcfr"]
+[ext_resource type="Texture2D" uid="uid://cpwiqxgh8liwv" path="res://Sprites/Characters/knight_f_idle_anim_f1.png" id="2_1pop8"]
+[ext_resource type="Texture2D" uid="uid://cfgdu8k3lxasb" path="res://Sprites/Characters/knight_f_idle_anim_f2.png" id="3_3klci"]
+[ext_resource type="Texture2D" uid="uid://3ipap5vdkqu1" path="res://Sprites/Characters/knight_f_idle_anim_f3.png" id="4_jupco"]
+[ext_resource type="Texture2D" uid="uid://daw7rgay8duls" path="res://Sprites/Characters/knight_f_run_anim_f0.png" id="5_g2fum"]
+[ext_resource type="Texture2D" uid="uid://04jvsqhmfhoc" path="res://Sprites/Characters/knight_f_run_anim_f1.png" id="6_tok1l"]
+[ext_resource type="Texture2D" uid="uid://cveglx8s7vjc3" path="res://Sprites/Characters/knight_f_run_anim_f2.png" id="7_vi085"]
+[ext_resource type="Texture2D" uid="uid://cmuekxgjqdyp6" path="res://Sprites/Characters/knight_f_run_anim_f3.png" id="8_kfeu6"]
+[ext_resource type="Script" path="res://Scripts/Gun.gd" id="10_aepos"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_uawfd"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4nmp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tt5r7")
+"texture": ExtResource("1_yjcfr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_rde20")
+"texture": ExtResource("2_1pop8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_3y0df")
+"texture": ExtResource("3_3klci")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_owwnf")
+"texture": ExtResource("4_jupco")
 }],
 "loop": true,
 "name": &"Idle",
@@ -32,32 +32,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_oqg0l")
+"texture": ExtResource("5_g2fum")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_pnowo")
+"texture": ExtResource("6_tok1l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_34dm7")
+"texture": ExtResource("7_vi085")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_2cw4o")
+"texture": ExtResource("8_kfeu6")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"Walk",
 "speed": 12.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_lksa3")
+script = ExtResource("1_dkh6q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(53, 34)
-sprite_frames = SubResource("SpriteFrames_uawfd")
-animation = &"walk"
+sprite_frames = SubResource("SpriteFrames_b4nmp")
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.524937
+frame_progress = 0.755311
 
 [node name="Gun" type="Node2D" parent="."]
-position = Vector2(54, 44)
-script = ExtResource("10_8l55j")
+position = Vector2(0, 9)
+script = ExtResource("10_aepos")
